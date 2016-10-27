@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-exports function (inRequire) {
+module.exports = function (inRequire) {
   return function(inFilename, inDefault, inTab) {
     var tab = inTab || 2;
     var defaultJson = inDefault;
