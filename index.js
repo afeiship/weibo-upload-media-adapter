@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-exports.jsonInit = function(inFilename, inDefault, inTab) {
+module.exports = function(inFilename, inDefault, inTab) {
   var tab = inTab || 2;
   var defaultJson = inDefault;
   if (typeof inDefault == 'string') {
