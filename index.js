@@ -1,16 +1,8 @@
 var fs = require('fs');
 
-module.exports = function (inRequire) {
-  return function(inFilename, inDefault, inTab) {
-    var tab = inTab || 2;
-    var defaultJson = inDefault;
-    if (typeof inDefault == 'string') {
-      defaultJson = inRequire(inDefault);
-    }
-
-    fs.writeFileSync(
-      inFilename,
-      JSON.stringify(defaultJson, null, tab)
-    );
-  };
+module.exports = function(inFilename, inDefaultJson, inTab) {
+  fs.writeFileSync(
+    inFilename,
+    JSON.stringify(inDefaultJson, null, inTab || 2)
+  );
 };
