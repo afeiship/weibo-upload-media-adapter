@@ -1,0 +1,12 @@
+{
+  "name": "json-init",
+  "version": "0.0.0",
+  "description": "Initialize JSON config by JSON string or default JSON file.",
+  "homepage": "https://github.com/afeiship/json-init",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
