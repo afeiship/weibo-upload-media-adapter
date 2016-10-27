@@ -8,7 +8,7 @@ exports.jsonInit = function(inFilename, inDefault, inTab) {
   }
 
   fs.writeFileSync(
-    path.join(inFilename),
+    inFilename,
     JSON.stringify(defaultJson, null, tab)
   );
 };
