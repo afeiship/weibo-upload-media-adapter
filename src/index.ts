@@ -13,9 +13,9 @@ interface UploadEvent {
   };
 }
 
-export default (inEvent: UploadEvent): Promise<string[]> => {
+export default async (inEvent: UploadEvent): Promise<string[]> => {
   const lcOpts = new NxLcOptions({ fetch, id: WEIBO_LC_ID });
-  const lcRes = lcOpts.get();
+  const lcRes = await lcOpts.get();
   const weiboOss = new NxWeiboOss(lcRes.value);
   const files = inEvent.target.value.map((item) => item.file);
   return new Promise((resolve) => {

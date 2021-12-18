@@ -13,9 +13,16 @@ npm install @jswork/weibo-upload-media-adapter
 
 ## usage
 ```js
+import ReactUploadMedia from '@jswork/react-upload-media';
 import weiboUploadMediaAdapter from '@jswork/weibo-upload-media-adapter';
 
-// usage goes here.
+// usage
+<ReactUploadMedia
+  count={4}
+  value={this.state.value}
+  onChange={this.handleChange}
+  onUpload={weiboUploadMediaAdapter}
+/>
 ```
 
 ## license
